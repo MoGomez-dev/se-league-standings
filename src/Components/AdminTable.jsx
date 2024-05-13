@@ -52,7 +52,7 @@ export const AdminTable = () => {
       updateDatabase(team);
     })
     const now = new Date();
-    const time = `${now.getMonth()}月${now.getDate()}日${now.getHours()}時${now.getMinutes()}分`;
+    const time = `${now.getMonth() + 1}月${now.getDate()}日${now.getHours()}時${now.getMinutes()}分`;
     await setDoc(doc(db,"data",'updateTime'),{
       time: time,
     });
